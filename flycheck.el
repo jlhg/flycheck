@@ -11645,7 +11645,7 @@ This syntax checker needs Rust 1.18 or newer.  See URL
 `https://www.rust-lang.org'."
   :command ("rustc"
             (option "--crate-type" flycheck-rust-crate-type)
-            "--emit=mir" "-o" "/dev/null" ; avoid creating binaries
+            "--emit=mir" "-o" "/tmp/rustc-syntax-check" ; avoid creating binaries
             "--error-format=json"
             (option-flag "--test" flycheck-rust-check-tests)
             (option-list "-L" flycheck-rust-library-path concat)
